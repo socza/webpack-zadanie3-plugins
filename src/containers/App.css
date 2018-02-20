@@ -1,0 +1,21 @@
+.TodoApp {
+    background-color: #F5F5F5;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.TodoList {
+    color: black;
+}
+.TodoList > p {
+    color: black;
+    width: 300px;
+    height: 40px;
+    border: 1px dashed black;
+}
