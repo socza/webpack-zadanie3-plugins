@@ -10,16 +10,18 @@ class App extends React.Component {
         this.state = {
             data: [{
                 id: 1,
-                    text: 'clean room'
+                    text: 'Clean room'
                 }, {
                 id: 2,
-                    text: 'wash the dishes'
+                    text: 'Wash the dishes'
                 }, {
                 id: 3,
-                    text: 'feed my cat'
+                    text: 'Feed my cat'
+                }, {
+                id: 4,
+                    text: '"Piwo" z Patrykiem ... bezalkoholowe :)'
             }]
         };
-        this.removeTodo = this.removeTodo.bind(this);
     }
     addTodo(val){
         const todo = {
@@ -37,7 +39,7 @@ class App extends React.Component {
         return (
             <div className={style.TodoApp}>
                 <Title todoData={this.state.data} todoName="ToDo"/>
-                <TodoList todoList={this.state.data} removeTodo={this.removeTodo}/>
+                <TodoList todoList={this.state.data} removeTodo={this.removeTodo.bind(this)}/>
             </div>
         );
     }
